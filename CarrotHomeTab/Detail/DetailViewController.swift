@@ -1,5 +1,5 @@
 //
-//  HomeViewcontrollerViewController.swift
+//  DetailViewController.swift
 //  CarrotHomeTab
 //
 //  Created by 신희권 on 2023/04/02.
@@ -7,22 +7,14 @@
 
 import UIKit
 
-class HomeViewcontrollerViewController: UIViewController {
-
+class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func ctaButtonTapped(_ sender: Any) {
-        let sb = UIStoryboard(name: "Detail", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-        
-        navigationController?.pushViewController(vc, animated: true)
-        
-    }
-    
+
     /*
     // MARK: - Navigation
 

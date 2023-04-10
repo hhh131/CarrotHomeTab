@@ -11,7 +11,10 @@
 		54821D4529D9827000926266 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54821D4429D9827000926266 /* DetailViewController.swift */; };
 		54821D4729D982FF00926266 /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54821D4629D982FF00926266 /* MainNavigationViewController.swift */; };
 		54821D4929D9832600926266 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54821D4829D9832600926266 /* MainTabBarController.swift */; };
-		54821D4B29D983DC00926266 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54821D4A29D983DC00926266 /* Detail.storyboard */; };
+		5489870029E3F86100F43DB6 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 548986FF29E3F86100F43DB6 /* Detail.storyboard */; };
+		5489870629E3FA9900F43DB6 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5489870429E3FA9900F43DB6 /* Home.storyboard */; };
+		5489870829E3FAD900F43DB6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5489870729E3FAD900F43DB6 /* HomeViewModel.swift */; };
+		5489870A29E40F3800F43DB6 /* ItemInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5489870929E40F3800F43DB6 /* ItemInfoCell.swift */; };
 		54C32FB129DA9F5E0015A701 /* MyTownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C32FB029DA9F5E0015A701 /* MyTownViewController.swift */; };
 		54C32FB329DA9F6E0015A701 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C32FB229DA9F6E0015A701 /* MyProfileViewController.swift */; };
 		54C32FB529DA9F770015A701 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C32FB429DA9F770015A701 /* ChatViewController.swift */; };
@@ -53,7 +56,10 @@
 		54821D4429D9827000926266 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		54821D4629D982FF00926266 /* MainNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
 		54821D4829D9832600926266 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		54821D4A29D983DC00926266 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		548986FF29E3F86100F43DB6 /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		5489870529E3FA9900F43DB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CarrotHomeTab/Views/Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		5489870729E3FAD900F43DB6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		5489870929E40F3800F43DB6 /* ItemInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfoCell.swift; sourceTree = "<group>"; };
 		54C32FB029DA9F5E0015A701 /* MyTownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTownViewController.swift; sourceTree = "<group>"; };
 		54C32FB229DA9F6E0015A701 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		54C32FB429DA9F770015A701 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +108,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5489870129E3F8C000F43DB6 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				54C32FB429DA9F770015A701 /* ChatViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		5491353A29E3F6D6006498CA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5489870429E3FA9900F43DB6 /* Home.storyboard */,
+				54821D4229D9826200926266 /* HomeViewcontrollerViewController.swift */,
+				5489870729E3FAD900F43DB6 /* HomeViewModel.swift */,
+				5489870929E40F3800F43DB6 /* ItemInfoCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5491353B29E3F6E0006498CA /* Mytown */ = {
+			isa = PBXGroup;
+			children = (
+				54C32FB029DA9F5E0015A701 /* MyTownViewController.swift */,
+			);
+			path = Mytown;
+			sourceTree = "<group>";
+		};
+		5491353C29E3F6F1006498CA /* MyProfile */ = {
+			isa = PBXGroup;
+			children = (
+				54C32FB229DA9F6E0015A701 /* MyProfileViewController.swift */,
+			);
+			path = MyProfile;
+			sourceTree = "<group>";
+		};
+		5491353D29E3F6FC006498CA /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				548986FF29E3F86100F43DB6 /* Detail.storyboard */,
+				54821D4429D9827000926266 /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		5491353E29E3F722006498CA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				54C32FB829DAD1D30015A701 /* UIBarButtonItem+CustomView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5491353F29E3F75E006498CA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				94A38E57286830EA000691E1 /* Main.storyboard */,
+				54821D4629D982FF00926266 /* MainNavigationViewController.swift */,
+				54821D4829D9832600926266 /* MainTabBarController.swift */,
+				54C32FB629DAA5AF0015A701 /* CustomBarItem.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		9402EE0E28673D9C00D33FDD /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,23 +221,19 @@
 			children = (
 				94BB227D28669A15004FC34D /* AppDelegate.swift */,
 				94BB227F28669A15004FC34D /* SceneDelegate.swift */,
-				54821D4429D9827000926266 /* DetailViewController.swift */,
-				54821D4A29D983DC00926266 /* Detail.storyboard */,
-				94A38E57286830EA000691E1 /* Main.storyboard */,
-				54821D4629D982FF00926266 /* MainNavigationViewController.swift */,
-				54821D4829D9832600926266 /* MainTabBarController.swift */,
-				54C32FB629DAA5AF0015A701 /* CustomBarItem.swift */,
-				54821D4229D9826200926266 /* HomeViewcontrollerViewController.swift */,
+				5491353F29E3F75E006498CA /* Views */,
+				94A38E4B2868307C000691E1 /* Model */,
+				5491353A29E3F6D6006498CA /* Home */,
+				5491353B29E3F6E0006498CA /* Mytown */,
+				5489870129E3F8C000F43DB6 /* Chat */,
+				5491353C29E3F6F1006498CA /* MyProfile */,
+				5491353D29E3F6FC006498CA /* Detail */,
 				9402EE1528673FB100D33FDD /* Utils */,
 				9402EE0E28673D9C00D33FDD /* Network */,
-				94A38E4B2868307C000691E1 /* Model */,
+				5491353E29E3F722006498CA /* Extensions */,
 				94BB228628669A16004FC34D /* Assets.xcassets */,
 				94BB228828669A16004FC34D /* LaunchScreen.storyboard */,
 				94BB228B28669A16004FC34D /* Info.plist */,
-				54C32FB029DA9F5E0015A701 /* MyTownViewController.swift */,
-				54C32FB229DA9F6E0015A701 /* MyProfileViewController.swift */,
-				54C32FB429DA9F770015A701 /* ChatViewController.swift */,
-				54C32FB829DAD1D30015A701 /* UIBarButtonItem+CustomView.swift */,
 			);
 			path = CarrotHomeTab;
 			sourceTree = "<group>";
@@ -300,8 +365,9 @@
 			files = (
 				94BB228A28669A16004FC34D /* LaunchScreen.storyboard in Resources */,
 				94A38E5C286830EA000691E1 /* Main.storyboard in Resources */,
+				5489870629E3FA9900F43DB6 /* Home.storyboard in Resources */,
 				94BB228728669A16004FC34D /* Assets.xcassets in Resources */,
-				54821D4B29D983DC00926266 /* Detail.storyboard in Resources */,
+				5489870029E3F86100F43DB6 /* Detail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +395,7 @@
 				94BB227E28669A15004FC34D /* AppDelegate.swift in Sources */,
 				54821D4729D982FF00926266 /* MainNavigationViewController.swift in Sources */,
 				54821D4929D9832600926266 /* MainTabBarController.swift in Sources */,
+				5489870829E3FAD900F43DB6 /* HomeViewModel.swift in Sources */,
 				94A38E512868307C000691E1 /* ItemInfo.swift in Sources */,
 				54821D4329D9826200926266 /* HomeViewcontrollerViewController.swift in Sources */,
 				94BB228028669A15004FC34D /* SceneDelegate.swift in Sources */,
@@ -340,6 +407,7 @@
 				54C32FB729DAA5AF0015A701 /* CustomBarItem.swift in Sources */,
 				54C32FB929DAD1D30015A701 /* UIBarButtonItem+CustomView.swift in Sources */,
 				9402EE1228673D9C00D33FDD /* Resource.swift in Sources */,
+				5489870A29E40F3800F43DB6 /* ItemInfoCell.swift in Sources */,
 				54821D4529D9827000926266 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +445,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		5489870429E3FA9900F43DB6 /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5489870529E3FA9900F43DB6 /* Base */,
+			);
+			name = Home.storyboard;
+			sourceTree = "<group>";
+		};
 		94A38E57286830EA000691E1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

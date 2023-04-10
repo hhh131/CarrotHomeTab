@@ -14,17 +14,16 @@ class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
+
     }
     
-    private func updateNavigationItem(vc: UIViewController) {
-        
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateNavigationItem(vc: self.selectedViewController!)
     }
-}
-
-extension MainTabBarController: UITabBarControllerDelegate{
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-  
-        switch viewController {
+    
+    private func updateNavigationItem(vc: UIViewController){
+        switch vc {
         case is HomeViewcontrollerViewController:
             let titleConfig = CustomBarItemConfigration(
                 title: "정자동",
@@ -46,6 +45,7 @@ extension MainTabBarController: UITabBarControllerDelegate{
   
             navigationItem.leftBarButtonItem = titleItem
             navigationItem.rightBarButtonItems = [feedItem,searchItem]
+            navigationItem.backButtonDisplayMode = .minimal
             
         case is MyTownViewController:
             let titleConfig = CustomBarItemConfigration(
@@ -62,7 +62,7 @@ extension MainTabBarController: UITabBarControllerDelegate{
             let feedItem = UIBarButtonItem.generate(with: feedConfig, width: 30)
   
             navigationItem.leftBarButtonItem = titleItem
-            navigationItem.rightBarButtonItem = feedItem
+            navigationItem.rightBarButtonItems = [feedItem]
             
         case is ChatViewController:
             let titleConfig = CustomBarItemConfigration(
@@ -108,6 +108,15 @@ extension MainTabBarController: UITabBarControllerDelegate{
             navigationItem.rightBarButtonItems = []
             
         }
+        
+    }
+    
+}
+
+extension MainTabBarController: UITabBarControllerDelegate{
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        
+        updateNavigationItem(vc: viewController)
         
     }
 }
