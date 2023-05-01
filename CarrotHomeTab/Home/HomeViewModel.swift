@@ -17,7 +17,6 @@ final class HomeViewModel{
     var subscriptions = Set<AnyCancellable>()
     
     let itemTapped = PassthroughSubject<ItemInfo,Never>()
-    
     init(network: NetworkService) {
         self.network = network
     }

@@ -24,7 +24,7 @@ class MainTabBarController: UITabBarController {
     
     private func updateNavigationItem(vc: UIViewController){
         switch vc {
-        case is HomeViewcontrollerViewController:
+        case is HomeViewcontroller:
             let titleConfig = CustomBarItemConfigration(
                 title: "정자동",
                 image: nil,

@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		54821D4329D9826200926266 /* HomeViewcontrollerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54821D4229D9826200926266 /* HomeViewcontrollerViewController.swift */; };
+		540958B529E6C94300E4FC32 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540958B429E6C94300E4FC32 /* DetailViewModel.swift */; };
+		540958B729E6C9AC00E4FC32 /* ItemInfoDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540958B629E6C9AC00E4FC32 /* ItemInfoDetails.swift */; };
+		54821D4329D9826200926266 /* HomeViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54821D4229D9826200926266 /* HomeViewcontroller.swift */; };
 		54821D4529D9827000926266 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54821D4429D9827000926266 /* DetailViewController.swift */; };
 		54821D4729D982FF00926266 /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54821D4629D982FF00926266 /* MainNavigationViewController.swift */; };
 		54821D4929D9832600926266 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54821D4829D9832600926266 /* MainTabBarController.swift */; };
@@ -15,6 +17,7 @@
 		5489870629E3FA9900F43DB6 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5489870429E3FA9900F43DB6 /* Home.storyboard */; };
 		5489870829E3FAD900F43DB6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5489870729E3FAD900F43DB6 /* HomeViewModel.swift */; };
 		5489870A29E40F3800F43DB6 /* ItemInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5489870929E40F3800F43DB6 /* ItemInfoCell.swift */; };
+		5489870D29E41FA300F43DB6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5489870C29E41FA300F43DB6 /* Kingfisher */; };
 		54C32FB129DA9F5E0015A701 /* MyTownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C32FB029DA9F5E0015A701 /* MyTownViewController.swift */; };
 		54C32FB329DA9F6E0015A701 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C32FB229DA9F6E0015A701 /* MyProfileViewController.swift */; };
 		54C32FB529DA9F770015A701 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C32FB429DA9F770015A701 /* ChatViewController.swift */; };
@@ -52,7 +55,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		54821D4229D9826200926266 /* HomeViewcontrollerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewcontrollerViewController.swift; sourceTree = "<group>"; };
+		540958B429E6C94300E4FC32 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		540958B629E6C9AC00E4FC32 /* ItemInfoDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfoDetails.swift; sourceTree = "<group>"; };
+		54821D4229D9826200926266 /* HomeViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewcontroller.swift; sourceTree = "<group>"; };
 		54821D4429D9827000926266 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		54821D4629D982FF00926266 /* MainNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
 		54821D4829D9832600926266 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -88,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5489870D29E41FA300F43DB6 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				5489870429E3FA9900F43DB6 /* Home.storyboard */,
-				54821D4229D9826200926266 /* HomeViewcontrollerViewController.swift */,
+				54821D4229D9826200926266 /* HomeViewcontroller.swift */,
 				5489870729E3FAD900F43DB6 /* HomeViewModel.swift */,
 				5489870929E40F3800F43DB6 /* ItemInfoCell.swift */,
 			);
@@ -148,6 +154,8 @@
 			children = (
 				548986FF29E3F86100F43DB6 /* Detail.storyboard */,
 				54821D4429D9827000926266 /* DetailViewController.swift */,
+				540958B429E6C94300E4FC32 /* DetailViewModel.swift */,
+				540958B629E6C9AC00E4FC32 /* ItemInfoDetails.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -272,6 +280,7 @@
 			);
 			name = CarrotHomeTab;
 			packageProductDependencies = (
+				5489870C29E41FA300F43DB6 /* Kingfisher */,
 			);
 			productName = CarrotHomeTab;
 			productReference = 94BB227A28669A15004FC34D /* CarrotHomeTab.app */;
@@ -346,6 +355,7 @@
 			);
 			mainGroup = 94BB227128669A15004FC34D;
 			packageReferences = (
+				5489870B29E41FA300F43DB6 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 94BB227B28669A15004FC34D /* Products */;
 			projectDirPath = "";
@@ -397,7 +407,7 @@
 				54821D4929D9832600926266 /* MainTabBarController.swift in Sources */,
 				5489870829E3FAD900F43DB6 /* HomeViewModel.swift in Sources */,
 				94A38E512868307C000691E1 /* ItemInfo.swift in Sources */,
-				54821D4329D9826200926266 /* HomeViewcontrollerViewController.swift in Sources */,
+				54821D4329D9826200926266 /* HomeViewcontroller.swift in Sources */,
 				94BB228028669A15004FC34D /* SceneDelegate.swift in Sources */,
 				54C32FB329DA9F6E0015A701 /* MyProfileViewController.swift in Sources */,
 				9402EE1728673FB100D33FDD /* Publisher+Utils.swift in Sources */,
@@ -405,10 +415,12 @@
 				54C32FB529DA9F770015A701 /* ChatViewController.swift in Sources */,
 				54C32FB129DA9F5E0015A701 /* MyTownViewController.swift in Sources */,
 				54C32FB729DAA5AF0015A701 /* CustomBarItem.swift in Sources */,
+				540958B529E6C94300E4FC32 /* DetailViewModel.swift in Sources */,
 				54C32FB929DAD1D30015A701 /* UIBarButtonItem+CustomView.swift in Sources */,
 				9402EE1228673D9C00D33FDD /* Resource.swift in Sources */,
 				5489870A29E40F3800F43DB6 /* ItemInfoCell.swift in Sources */,
 				54821D4529D9827000926266 /* DetailViewController.swift in Sources */,
+				540958B729E6C9AC00E4FC32 /* ItemInfoDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -758,6 +770,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5489870B29E41FA300F43DB6 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = exactVersion;
+				version = 7.6.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5489870C29E41FA300F43DB6 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5489870B29E41FA300F43DB6 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 94BB227228669A15004FC34D /* Project object */;
 }

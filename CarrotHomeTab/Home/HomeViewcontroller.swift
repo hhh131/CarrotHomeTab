@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-class HomeViewcontrollerViewController: UIViewController {
+class HomeViewcontroller: UIViewController {
     
     @IBOutlet var collectionView: UICollectionView!
     
@@ -25,7 +25,9 @@ class HomeViewcontrollerViewController: UIViewController {
         configureCollectionView()
         bind()
         viewModel.fetch()
-    }
+        
+        collectionView.delegate = self
+       }
     private func configureCollectionView(){
         dataSource = UICollectionViewDiffableDataSource<Section,Item>(collectionView: collectionView, cellProvider: { collectionView, indexPath, item in
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemInfoCell", for: indexPath) as? ItemInfoCell else { return nil }
@@ -58,6 +60,7 @@ class HomeViewcontrollerViewController: UIViewController {
             .sink{ item in
                 let sb = UIStoryboard(name: "Detail", bundle: nil)
                 let vc = sb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+                vc.viewModel = DetailViewModel(natwork: NetworkService(configuration: .default), iteminfo: item)
                 self.navigationController?.pushViewController(vc, animated: true)
             }.store(in: &subscriptions)
         
@@ -77,12 +80,12 @@ class HomeViewcontrollerViewController: UIViewController {
     }
     
 }
-//
-//    @IBAction func ctaButtonTapped(_ sender: Any) {
-//        let sb = UIStoryboard(name: "Detail", bundle: nil)
-//        let vc = sb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-//
-//        navigationController?.pushViewController(vc, animated: true)
-//
-//    }
-//
+
+extension HomeViewcontroller: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let item = viewModel.items[indexPath.item]
+        viewModel.itemTapped.send(item)
+    }
+}
+
+
